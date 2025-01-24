@@ -1,9 +1,4 @@
-FROM nginx:alpine
-
+FROM nginx:1.10.1-alpine
 COPY index.html /usr/share/nginx/html
-
-# Expose the frontend service port
-EXPOSE 80
-
-# Start the Nginx server
+EXPOSE 52
 CMD ["nginx", "-g", "daemon off;"]
